@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="width"/>
+        <title>TEMPARATURE CONVERTER
+        </title>
+        
+        <style>
+            .pattern{
+                background-color: rgb(106, 64, 9);
+                border: .0625rem;
+                align-self: center;
+                position: absolute;
+        
+
+            }
+            .container{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 50px;
+                width: 350px;
+                height: 200px;
+                outline: dashed 4px rgb(0, 0, 0); 
+                text-align: center;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                background-color: aquamarine;
+                position: absolute;
+
+            }
+        </style>
+        <center><h1>CONVERSION FROM CELSIUS TO FAHRENHEIT</h1></center>
+        <form>
+            <body  style="background-color:rgb(197, 251, 255);">
+            
+            <div class="container">
+                <p>
+                    <label>CELSIUS</label>
+                    <input id="inputCELSIUS" type="number" placeholder="Enter in celsius"
+                    oninput="temperatureConverter(this.value)"
+                    onchange="temperatureConverter(this.value)">
+                  </p>
+                  <p>
+                    <label>VALUE AFTER CONVERSION</label>
+                    FAHRENHEIT: <span id="outputfahrenheit"></span></p>
+                  </div>
+            </form>
+        </body>
+        <script>
+            function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputfahrenheit").innerHTML = (valNum*1.8)+32;
+}
+ 
+
+        
+        </script>
+
+        
+    </head>
+</html>
